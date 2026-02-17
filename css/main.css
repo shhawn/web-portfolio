@@ -1,3 +1,4 @@
+/* HEADER */
 header {
   position: fixed;
   width: 90%;
@@ -15,8 +16,14 @@ header .header-wrap h3 {
   font-weight: 600;
 }
 
+/* SECTION 01 */
+main section .inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .section1 {
-  padding: 17rem 4rem 16rem;
+  padding: 17rem 0 16rem;
   background: #fffcf9;
 }
 .section1 .title-wrap  {
@@ -33,3 +40,73 @@ header .header-wrap h3 {
   line-height: 1.9;
   color: #666;
 }
+
+/* SECTION 02 */
+.section2 .inner {
+  padding: 10rem 0;
+  display: flex;
+  gap: 6rem;
+}
+.section2 .photo-wrap {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 1.5rem;
+  background: tomato;
+  flex-shrink: 0;
+}
+.section2 .introduce-wrap {
+  padding-top: 1rem;
+}
+.section2 .introduce-wrap span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke: 1px #999;
+  margin-bottom: 1.5rem;
+}
+.section2 .introduce-wrap p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.7;
+}
+.section2 .introduce-wrap .list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+.section2 .introduce-wrap .list-wrap .list-box h5 {
+  border-top: 1px solid #333;
+  border-bottom: 1px dashed #555;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #222;
+}
+.section2 .introduce-wrap .list-wrap .list-box h5 b {
+  color: #ddd;
+  font-size: 1.35rem;
+  margin-left: .35rem;
+}
+.section2 .introduce-wrap .list-wrap .list-box ul {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.section2 .introduce-wrap .list-wrap .list-box ul li {
+  font-size: 1.1rem;
+}
+.section2 .introduce-wrap .list-wrap .list-box ul li b {
+  color: #444;
+  background: #eee;
+  font-size: .8rem;
+  font-weight: 500;
+  padding: .2rem .8rem;
+  border-radius: 1rem;
+  letter-spacing: -.5px;
+  margin-left: .4rem;
+}
+
+/* SECTION 03 */
