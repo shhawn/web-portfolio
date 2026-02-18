@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>포트폴리오</title>
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
       <div class="inner">
         <div class="title-wrap">
           <h1>Shawn.Codes</h1>
-          <p>기획과 디자인의 의도를 이해하고, 복잡한 UI 로직을 유연하게 풀어내는 퍼블리셔 김승환입니다.<br/>프론트엔드 지식을 바탕으로 마크업과 스크립트 간의 최적화된 접점을 찾아냅니다.<br/>동료들과 소통하며 안정적인 코드 위에 생명력을 불어넣는 과정, 그 즐거움으로 매일 성장하고 있습니다.</p>
+          <p>기획과 디자인의 의도를 이해하고, 복잡한 UI 로직을 유연하게 풀어내는 웹 퍼블리셔 김승환입니다.<br/>프론트엔드 지식을 바탕으로 마크업과 스크립트 간의 최적화된 접점을 찾아냅니다.<br/>동료들과 소통하며 안정적인 코드 위에 생명력을 불어넣는 과정, 그 즐거움으로 매일 성장하고 있습니다.</p>
         </div>
       </div>
     </section>
@@ -58,8 +59,55 @@
       </div>
     </section>
     <section class="section3">
-
+      <div class="inner">
+        <h2>WORKS</h2>
+        <div class="works-wrap">
+          <ul>
+            <li class="pf1"><a href="./works/01/">01</a></li>
+            <li class="pf2"><a href="">02</a></li>
+            <li class="pf3"><a href="">03</a></li>
+            <li class="pf4"><a href="">04</a></li>
+            <li class="pf5"><a href="">05</a></li>
+            <li class="pf5"><a href="">06</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section4">
+      <div class="inner">
+        <div class="contact-wrap">
+          <span>Contact</span>
+          <div class="title-wrap">
+            <h2>ksh_729@naver.com</h2>
+            <a href="mailto:ksh_729@naver.com">✉️ 이메일 문의하기</a>
+          </div>
+          <p>
+            함께 성장하며 가치 있는 결과물을 만들 파트너를 찾고 계신가요?<br/>
+            협업 제안이나 문의 사항은 언제든 메일 보내주시면 답장 드리겠습니다.<br/>
+            제 포트폴리오를 봐주셔서 감사드리고, 새로운 도전과 협업은 언제든 환영입니다!
+          </p>
+        </div>
+      </div>
     </section>
   </main>
+  <script>
+    const list = document.querySelector('.section3 .works-wrap ul');
+    const items = document.querySelectorAll('.section3 .works-wrap ul li a');
+
+    items.forEach((item, index) => {
+      item.addEventListener('mouseenter', () => {
+        const col = index % 2;
+        const row = Math.floor(index / 2);
+
+        list.style.gridTemplateColumns = col === 0 ? '75% 25%' : '25% 75%';
+        list.style.gridTemplateRows = ['33.333%', '33.333%', '33.333%'].map((v, i) => i === row ? '60%' : '20%').join(' ');
+      });
+
+      item.addEventListener('mouseleave', () => {
+        list.style.gridTemplateColumns = '50% 50%';
+        list.style.gridTemplateRows = '33.333% 33.333% 33.333%';
+      });
+    });
+  </script>
 </body>
 </html>

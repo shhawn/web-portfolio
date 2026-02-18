@@ -1,0 +1,17 @@
+/* HEADER */
+header {
+  position: fixed;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2.5rem;
+}
+header .header-wrap {
+  border-top: 2px solid #111;
+  border-bottom: 1px solid #111;
+  padding: 1rem .8rem;
+}
+header .header-wrap h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
