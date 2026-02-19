@@ -122,19 +122,15 @@ main section .inner {
 
 /* SECTION 04 */
 .section4 {
-  padding: 5rem 0;
-}
-.section4 .contact-wrap {
-  background: #222;
-  padding: 4.5rem;
-  border-radius: 2rem;
+  background: #fffaf4;
+  padding: 8rem 0;
 }
 .section4 .contact-wrap span {
   display: block;
-  color: #666;
-  font-size: 1.8rem;
+  color: #bbb;
+  font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: .6rem;
+  margin-bottom: 2rem;
 }
 .section4 .contact-wrap .title-wrap {
   display: flex;
@@ -143,20 +139,21 @@ main section .inner {
   gap: 1.5rem;
 }
 .section4 .contact-wrap .title-wrap h2 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   font-weight: 600;
-  color: #fff;
+  color: #333;
 }
 .section4 .contact-wrap .title-wrap a {
   color: #333;
-  background: #ddd;
+  background: #fff;
   padding: .5rem 1rem;
   border-radius: 1rem;
   font-weight: 500;
   font-size: 1.1rem;
+  box-shadow: rgba(99, 99, 99, 0.25) 0px 2px 8px 0px;
 }
 .section4 .contact-wrap p {
-  color: #eaeaea;
+  color: #333;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.9;
