@@ -1,0 +1,63 @@
+/* HEADER */
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-wrap a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title-sec {
+  padding: 12rem 0 4.5rem;
+  border-bottom: 1px dashed #bbb;
+}
+.title-sec span {
+  display: block;
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+.title-sec h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -2.5px;
+}
+.title-sec .skills {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.title-sec .skills li {
+  background: #eee;
+  color: #555;
+  padding: .4rem 1rem .2rem;
+  border-radius: 1rem;
+  font-size: .9rem;
+  letter-spacing: -.5px;
+}
+.title-sec p {
+  margin-top: 2.8rem;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.detail-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+.detail-sec h3 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke: 1px #666;
+}
