@@ -7,6 +7,7 @@ main section .inner {
 }
 
 .section1 {
+  position: relative;
   padding: 17rem 0 16rem;
   background: #fffcf9;
 }
@@ -23,6 +24,46 @@ main section .inner {
   font-size: 1.5rem;
   line-height: 1.9;
   color: #666;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+}
+.scroll-indicator span {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .25rem;
+  color: #aaa;
+}
+.scroll-line {
+  width: 1px;
+  height: 4.5rem;
+  background: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+.scroll-dot {
+  width: 1px;
+  height: 1.5rem;
+  background: #555;
+  position: absolute;
+  top: -1.5rem;
+  animation: scrollDown 1.6s ease-in-out infinite;
+}
+@keyframes scrollDown {
+  0%   { top: -1.5rem; opacity: 1; }
+  70%  { top: 100%;    opacity: 1; }
+  71%  { top: 100%;    opacity: 0; }
+  72%  { top: -1.5rem; opacity: 0; }
+  100% { top: -1.5rem; opacity: 1; }
 }
 
 /* SECTION 02 */
