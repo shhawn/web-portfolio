@@ -10,7 +10,7 @@
 }
 
 .inner {
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@
 .title-sec .skills li {
   background: #eee;
   color: #555;
-  padding: .4rem 1rem .2rem;
+  padding: .4rem 1rem;
   border-radius: 1rem;
   font-size: .9rem;
   letter-spacing: -.5px;
@@ -52,12 +52,43 @@
 .detail-sec {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 6rem;
   padding: 4rem 0;
 }
 .detail-sec h3 {
-  font-size: 5rem;
-  font-weight: 900;
-  color: #fff;
-  -webkit-text-stroke: 1px #666;
+  font-family: 'YeogiOttaeJalnan';
+  font-size: 3.2rem;
+  color: #333;
+  margin-bottom: 1.6rem;
+  letter-spacing: -2px;
+}
+.detail-sec .pc-wrap .photo-wrap ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.detail-sec .pc-wrap .photo-wrap ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.detail-sec .pc-wrap .photo-wrap ul li {
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+.detail-sec .mobile-wrap .photo-wrap ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.detail-sec .mobile-wrap .photo-wrap ul li {
+  height: 1000px;
+  border: 1px solid #ddd;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+.detail-sec .photo-wrap ul li img {
+  width: 100%;
 }

@@ -69,12 +69,60 @@
         <h2>WORKS</h2>
         <div class="works-wrap">
           <ul>
-            <li class="pf1"><a href="./works/01/">텔레몬</a></li>
-            <li class="pf2"><a href="">네티즌어워즈</a></li>
-            <li class="pf3"><a href="">랜딩페이지</a></li>
-            <li class="pf4"><a href="">앱</a></li>
-            <li class="pf5"><a href="">쇼엠인슈어런스</a></li>
-            <li class="pf5"><a href="">인슈랩스</a></li>
+            <li class="pf1">
+              <a href="./works/01/">
+                <div class="title-wrap">
+                  <span>01</span>
+                  <h3>텔레몬</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
+            <li class="pf2">
+              <a href="">
+                <div class="title-wrap">
+                  <span>02</span>
+                  <h3>네티즌어워즈</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
+            <li class="pf3">
+              <a href="">
+                <div class="title-wrap">
+                  <span>03</span>
+                  <h3>보험 랜딩페이지</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
+            <li class="pf4">
+              <a href="">
+                <div class="title-wrap">
+                  <span>04</span>
+                  <h3>앱 제작</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
+            <li class="pf5">
+              <a href="">
+                <div class="title-wrap">
+                  <span>05</span>
+                  <h3>인슈랩스</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
+            <li class="pf6">
+              <a href="">
+                <div class="title-wrap">
+                  <span>06</span>
+                  <h3>쇼엠인슈어런스</h3>
+                </div>
+                <p>자세히 보기 Click!</p>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -107,11 +155,17 @@
 
         list.style.gridTemplateColumns = col === 0 ? '75% 25%' : '25% 75%';
         list.style.gridTemplateRows = ['33.333%', '33.333%', '33.333%'].map((v, i) => i === row ? '60%' : '20%').join(' ');
+        item.classList.add('hovered');
+        item.querySelector('.title-wrap h3').style.textShadow = '2px 2px 6px rgba(0,0,0,0.8), -1px -1px 4px rgba(0,0,0,0.6)';
+        item.querySelector('p').style.textShadow = '2px 2px 6px rgba(0,0,0,0.8), -1px -1px 4px rgba(0,0,0,0.6)';
       });
 
       item.addEventListener('mouseleave', () => {
         list.style.gridTemplateColumns = '50% 50%';
         list.style.gridTemplateRows = '33.333% 33.333% 33.333%';
+        item.classList.remove('hovered');
+        item.querySelector('.title-wrap h3').style.textShadow = '';
+        item.querySelector('p').style.textShadow = '';
       });
     });
   </script>
