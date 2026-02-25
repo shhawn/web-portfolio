@@ -3,10 +3,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: .8rem 2rem !important;
 }
 .header-wrap a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   font-size: 1.1rem;
   font-weight: 500;
+  color: #333;
+}
+.header-wrap a img {
+  width: 1.3rem;
+}
+.header-wrap a.home img {
+  width: 1.4rem;
+}
+.header-wrap a.prev img {
+  transform: scaleX(-1);
 }
 
 .inner {
@@ -47,6 +61,8 @@
   margin-top: 2.8rem;
   font-size: 1.3rem;
   color: #444;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
 .detail-sec {
@@ -58,7 +74,7 @@
 .detail-sec h3 {
   font-family: 'YeogiOttaeJalnan';
   font-size: 3.2rem;
-  color: #333;
+  color: #222;
   margin-bottom: 1.6rem;
   letter-spacing: -2px;
 }

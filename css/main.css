@@ -14,16 +14,29 @@ main section .inner {
 .section1 .title-wrap  {
   text-align: center;
 }
+.section1 .title-wrap .h1-mask {
+  overflow: hidden;
+}
 .section1 .title-wrap h1 {
   font-size: 11rem;
   font-weight: 700;
   letter-spacing: -11px;
+  animation: heroReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+@keyframes heroReveal {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
 }
 .section1 .title-wrap p {
   margin-top: 4rem;
   font-size: 1.5rem;
   line-height: 1.9;
   color: #666;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* SCROLL INDICATOR */
@@ -36,6 +49,11 @@ main section .inner {
   flex-direction: column;
   align-items: center;
   gap: .6rem;
+  animation: heroFadeIn 0.6s ease 1.4s both;
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .scroll-indicator span {
   font-size: .75rem;
@@ -66,11 +84,28 @@ main section .inner {
   100% { top: -1.5rem; opacity: 1; }
 }
 
+/* WAVE EMOJI */
+.section2 .introduce-wrap span.wave {
+  display: inline-block;
+  transform-origin: bottom center;
+  vertical-align: middle;
+  -webkit-text-stroke: 0;
+  animation: waveHand 2s ease-in-out infinite;
+}
+@keyframes waveHand {
+  0%        { transform: rotate(  0deg); }
+  15%       { transform: rotate( 20deg); }
+  27%       { transform: rotate( -5deg); }
+  40%       { transform: rotate( 20deg); }
+  52%       { transform: rotate( -5deg); }
+  62%, 100% { transform: rotate(  0deg); }
+}
+
 /* SECTION 02 */
 .section2 .inner {
   padding: 10rem 0;
   display: flex;
-  gap: 6rem;
+  gap: 5.5rem;
 }
 .section2 .photo-wrap {
   width: 20rem;
@@ -84,16 +119,17 @@ main section .inner {
 }
 .section2 .introduce-wrap span {
   display: block;
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 900;
   color: #fff;
-  -webkit-text-stroke: 1px #999;
+  -webkit-text-stroke: 1px #777;
   margin-bottom: 1.5rem;
 }
 .section2 .introduce-wrap p {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: #555;
   line-height: 1.7;
+  word-break: keep-all;
 }
 .section2 .introduce-wrap .list-wrap {
   display: flex;
@@ -159,7 +195,7 @@ main section .inner {
   grid-template-columns: 50% 50%;
   grid-template-rows: 33.333% 33.333% 33.333%;
   width: 100%;
-  height: 45rem;
+  height: 50rem;
   transition: grid-template-columns 0.4s ease, grid-template-rows 0.4s ease;
 }
 .section3 .works-wrap ul li a {
@@ -245,7 +281,7 @@ main section .inner {
 
 /* SECTION 04 */
 .section4 {
-  background: #fffaf4;
+  background: #fff5ea;
   padding: 8rem 0;
 }
 .section4 .contact-wrap span {
