@@ -28,6 +28,29 @@
   margin: 0 auto;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-sec .fade-up-1,
+.title-sec .fade-up-2 {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+.title-sec .fade-up-1 {
+  animation-delay: 0.1s;
+}
+.title-sec .fade-up-2 {
+  animation-delay: 0.55s;
+}
+
 .title-sec {
   padding: 12rem 0 4.5rem;
   border-bottom: 1px dashed #bbb;
@@ -89,7 +112,7 @@
   gap: 1rem;
 }
 .detail-sec .pc-wrap .photo-wrap ul li {
-  height: 600px;
+  height: 800px;
   border: 1px solid #ddd;
   border-radius: .7rem;
   overflow: hidden;
@@ -107,4 +130,90 @@
 }
 .detail-sec .photo-wrap ul li img {
   width: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1460px) {
+  .inner {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    width: 90%;
+  }
+
+  /* HEADER */
+  .header-wrap a {
+    font-size: .85rem;
+  }
+  .header-wrap a img {
+    width: 1rem;
+  }
+  .header-wrap a.home img {
+    width: 1.1rem;
+  }
+
+  /* TITLE SEC */
+  .title-sec {
+    padding: 9rem 0 3rem;
+  }
+  .title-sec span {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  .title-sec h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1.5px;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .title-sec .skills {
+    flex-wrap: wrap;
+  }
+  .title-sec p {
+    font-size: .95rem;
+    margin-top: 1.8rem;
+  }
+  .title-sec p br {
+    display: none;
+  }
+  .title-sec p .gap {
+    display: block;
+  }
+
+  /* DETAIL SEC */
+  .detail-sec {
+    gap: 4rem;
+    padding: 3rem 0;
+  }
+  .detail-sec h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .detail-sec .pc-wrap .photo-wrap ul {
+    grid-template-columns: 1fr;
+  }
+  .detail-sec .pc-wrap .photo-wrap ul li {
+    height: 500px;
+  }
+  .detail-sec .mobile-wrap .photo-wrap ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-sec .mobile-wrap .photo-wrap ul li {
+    height: 680px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-wrap {
+    padding: .8rem 1rem !important;
+  }
+  .detail-sec .mobile-wrap .photo-wrap ul {
+    grid-template-columns: 1fr;
+  }
+  .detail-sec .mobile-wrap .photo-wrap ul li {
+    height: 800px;
+  }
 }
